@@ -1,21 +1,217 @@
 body {
-    background-color: #f0efed;
+    background-color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .container {
     margin: 0 auto;
     width: 960px;
     font-size: 100%;
-    line-height: 1.5;
-    font-family: 'Miriam Libre', sans-serif;
     text-align: center;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
 }
+
+/* COLORS
+header-font="#1e426e" and buttons
+top-nav="#1e426e"
+hero-nav="#e8f4f9"
+footer-bg="#e8f4f9"
+hero-links="#2a5ea5"
+*/
 
 /* TYPOGRAPHY */
 
+h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color:#1e426e;
+}
+
+ul {
+    list-style: none;
+}
+
+.top-menu .item {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.75rem;
+}
+
+.main-menu .item {
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    color:#1e426e;
+}
+
+.grid .item {
+    font-size: 2.25rem;
+    color: #2a5ea5;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 3.875rem;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 4.25rem;
+}
+
+footer p {
+    font-size: 2.25rem;
+}
+
+footer ul li {
+    font-size: 2.25rem;
+    color: #1e426e;
+}
 
 
 
 /* YOUR STYLES */
 
+.top-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e426e;
+    padding: 0;
+}
 
+.top-menu .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 8rem;
+    width: 25%;
+    border-left: 2px solid #fff;
+    padding: 1rem;
+}
+
+.top-menu .item:nth-child(1) {
+    border-left: none;
+}
+
+.main-nav {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.main-menu .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 33%;
+}
+
+.hero-image {
+    background-image: url("../img/banner-wind.jpg");
+    height: 250px;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    background-color: #e8f4f9;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2.5rem;
+    gap: 2.5rem;
+}
+
+.grid .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 47.5%;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    padding: 1rem 0;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+    gap: 2rem;
+}
+
+svg {
+    width: 500px;
+    height: 500px;
+}
+
+text {
+    fill: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: .75rem;
+}
+
+button {
+    background-color: #1e426e;
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1.25rem;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #e8f4f9;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+footer ul li {
+    padding: 0 1rem;
+}
+
+/* figure out where padding-left of 40 is coming from */
+
+/* MEDIA QUERIES */
+
+/* medium 800px */
+/* large 1300px */

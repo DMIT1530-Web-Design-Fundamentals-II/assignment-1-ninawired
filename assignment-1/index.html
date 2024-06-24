@@ -4,66 +4,83 @@
         <meta charset="utf-8">
         <title>Assignment 1</title>
         <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/reboot.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <script src="js/script.js" defer></script>
+
     </head>
     <body>
         <header>
-            <div class="top-nav">
-                <ul>
-                    <li>outage center</li>
-                    <li>pay your bill</li>
-                    <li>start, stop, move, service</li>
-                    <li>contact us</li>
+            <nav>
+                <ul class="top-menu">
+                    <li class="item">outage center</li>
+                    <li class="item">pay your bill</li>
+                    <li class="item">start, stop, move service</li>
+                    <li class="item">contact us</li>
                 </ul>
-            </div>
-            <div class="main-nav">
+            </nav>
+            <nav class="main-nav">
                 <h1>XYZ Power</h1>
-                <nav>
-                    <ul>
-                        <li>home page</li>
-                        <li>your home</li>
-                        <li>community</li>
-                    </ul>
-                </nav>
+                <ul class="main-menu">
+                    <li class="item">home page</li>
+                    <li class="item">your home</li>
+                    <li class="item">community</li>
+                </ul>
+            </nav>
             </div>
         </header>
         <main>
             <section class="hero">
-                <img src="img/banner-wind.jpg" alt="windmill banner">
-                <ul>
-                    <li>Login/Register to MyAccount</li>
-                    <li>Billing & Payment Options</li>
-                    <li>Clean & Green Initiative</li>
-                    <li>Customer Service</li>
-                    <li>Report an Outage</li>
-                    <li>Live Outage Map</li>
-                </ul>
+                <div class="hero-image"></div>
+                <div class="grid-container">
+                    <ul class="grid">
+                        <li class="item">Login/Register to MyAccount</li>
+                        <li class="item">Billing & Payment Options</li>
+                        <li class="item">Clean & Green Initiative</li>
+                        <li class="item">Customer Service</li>
+                        <li class="item">Report an Outage</li>
+                        <li class="item">View Live Outage Map</li>
+                    </ul>
+                </div>
             </section>
             <div class="container">
-                <section>
-                    <div class="">
-                        <h2>Today's engery stats</h2>
-                        <p>Where is your electricity coming from?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, consequatur? Harum non officia, possimus nemo accusamus blanditiis dolor ut, tempora, mollitia molestiae repudiandae quibusdam itaque. Doloribus quia autem vel provident?</p>
-                        <img>
-                        <button class="">Learn more about today's power</button>
+                <section class="stats">
+                    <h2>Today's energy stats</h2>
+                    <p>Where is your electricity coming from?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, consequatur? Harum non officia, possimus nemo accusamus blanditiis dolor ut, tempora, mollitia molestiae repudiandae quibusdam itaque. Doloribus quia autem vel provident?</p>
+                    <div class="charts">
+                        <!-- CSS Tricks article - https://css-tricks.com/building-a-donut-chart-with-vue-and-svg/ -->
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+                        <div id="app">
+                            <donut-chart :initial-values="values"></donut-chart>
+                        </div>
+                        <script type="text/x-template" id="donutTemplate">
+                            <svg height="160" width="160" viewBox="0 0 160 160" class="donut-chart">
+                                <g v-for="(value, index) in sortedValues">
+                                    <circle :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
+
+                                    <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ percentageString(value) }}</text>
+                                </g>
+                            </svg>
+                        </script>
                     </div>
+                    <button>Learn more about today's power</button>
                 </section>
-                <section>
-                    <div class="">
-                        <h3>By the numbers</h3>
-                        <p>How we're making a difference</p>
-                        <h4>33% less carbon since 2005</h4>
-                        <p>We're well ahead of our national goal of a 30% reduction by 2030.</p>
-                        <h4>17% wind energy</h4>
-                        <p>Our Province has one of the highest integrations of wind in North America.</p>
-                        <h4>Up to 140 batteries in homes across the province</h4>
-                        <p>We're exploring innovative technology like battery storage to help bring more clean energy to the grid.</p>
-                        <h4>61% clean energy by 2022</h4>
-                        <p>We are on our way to a greener future for our province</p>
-                        <button class="">Learn more about us</button>
-                    </div>
-                </section>
+                <aside>
+                    <h3>By the numbers</h3>
+                    <p>How we're making a difference</p>
+                    <h4>33% less carbon since 2005</h4>
+                    <p>We're well ahead of our national goal of a 30% reduction by 2030.</p>
+                    <h4>17% wind energy</h4>
+                    <p>Our Province has one of the highest integrations of wind in North America.</p>
+                    <h4>Up to 140 batteries in homes across the province</h4>
+                    <p>We're exploring innovative technology like battery storage to help bring more clean energy to the grid.</p>
+                    <h4>61% clean energy by 2022</h4>
+                    <p>We are on our way to a greener future for our province</p>
+                    <button>Learn more about us</button>
+                </aside>
             </div>
         </main>
         <footer>
