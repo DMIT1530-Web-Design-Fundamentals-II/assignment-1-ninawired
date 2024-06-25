@@ -4,67 +4,75 @@
         <meta charset="utf-8">
         <title>Assignment 1</title>
         <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/reboot.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/script.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="top-nav">
-                <ul>
-                    <li>outage center</li>
-                    <li>pay your bill</li>
-                    <li>start, stop, move, service</li>
-                    <li>contact us</li>
+        <header class="header">
+            <nav class="top-menu">
+                <ul class="top-menu-items">
+                    <li class="item">outage center</li>
+                    <li class="item">pay your bill</li>
+                    <li class="item">start, stop, move service</li>
+                    <li class="item">contact us</li>
                 </ul>
-            </div>
-            <div class="main-nav">
+            </nav>
+            <nav class="main-menu">
                 <h1>XYZ Power</h1>
-                <nav>
-                    <ul>
-                        <li>home page</li>
-                        <li>your home</li>
-                        <li>community</li>
-                    </ul>
-                </nav>
-            </div>
+                <ul class="main-menu-items">
+                    <li class="item"><a href="index.html">Home Page</a></li>
+                    <li class="item"><a href="your-home.html">Your Home</a></li>
+                    <li class="item"><a href="community.html">Community</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <section class="hero">
-                <img src="img/banner-wind.jpg" alt="windmill banner">
+            <section class="community-hero">
+                <img src="img/banner-community.jpg" alt="community banner">
             </section>
-            <div class="container">
-                <section>
-                    <h2>Community</h2>
-                    <p>We are a lot about giving back to the areas where we live and work to help make every day.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error maxime ut aperiam. Iusto debitis voluptatem ut quis minus, fuga recusandae quos architecto necessitatibus veniam labore! Quia ipsam ab libero tenetur.</p>
-                    <div class="community-1">
-                        <img src="img/community-1.jpg">
+            <section class="community">
+                <h2>Community</h2>
+                <p>We are a lot about giving back to the areas where we live and work to help make every day.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error maxime ut aperiam. Iusto debitis voluptatem ut quis minus, fuga recusandae quos architecto necessitatibus veniam labore! Quia ipsam ab libero tenetur.</p>
+                <section class="home-grid">
+                    <div class="card">
+                        <img src="img/community-1.jpg" alt="generic community image">
                         <span>Income-based programs ></span>
                     </div>
-                    <div class="community-2">
-                        <img src="img/community-2.jpg">
+                    <div class="card">
+                        <img src="img/community-2.jpg" alt="generic community image">
                         <span>Community Investments ></span>
                     </div>
-                    <div class="community-3">
-                        <img src="img/community-3.jpg">
+                    <div class="card">
+                        <img src="img/community-3.jpg" alt="generic community image">
                         <span>Scholarships & Bursaries ></span>
                     </div>
                 </section>
-                <section>
-                    <h3>Building stronger communities together</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolores quidem aspernatur ex fuga, incidunt molestias adipisci possimus nemo odio. Quaerat doloremque minima praesentium impedit sed. Alias unde saepe amet?</p>
-                    <span>Learn about our community investments ></span>
-                </section>
-            </div>
+            </section>
+            <section class="bottom-image">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Building stronger communities together</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolores quidem aspernatur ex fuga, incidunt molestias adipisci possimus nemo odio. Quaerat doloremque minima praesentium impedit sed. Alias unde saepe amet?</p>
+                        <span>Learn about our community investments ></span>
+                    </div>
+                </div>            
+            </section>
         </main>
-        <footer>
-            <p>© 2021 XYZ Power.</p>
-            <ul>
-                <li>Media</li>
-                <li>Legal</li>
-                <li>Privay Statement</li>
-                <li>Careers</li>
-                <li>Sitemap</li>
-            </ul>
+        <footer class="footer">
+            <nav class="footer-menu">
+                <p>© 2021 XYZ Power.</p>
+                <ul class="footer-items">
+                    <li class="item">Media</li>
+                    <li class="item">Legal</li>
+                    <li class="item">Privacy Statement</li>
+                    <li class="item">Careers</li>
+                    <li class="item">Sitemap</li>
+                </ul>
+            </nav>
         </footer>
     </body>
 </html>

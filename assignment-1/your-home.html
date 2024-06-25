@@ -4,98 +4,112 @@
         <meta charset="utf-8">
         <title>Assignment 1</title>
         <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/reboot.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/script.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="top-nav">
-                <ul>
-                    <li>outage center</li>
-                    <li>pay your bill</li>
-                    <li>start, stop, move, service</li>
-                    <li>contact us</li>
+        <header class="header">
+            <nav class="top-menu">
+                <ul class="top-menu-items">
+                    <li class="item">outage center</li>
+                    <li class="item">pay your bill</li>
+                    <li class="item">start, stop, move service</li>
+                    <li class="item">contact us</li>
                 </ul>
-            </div>
-            <div class="main-nav">
+            </nav>
+            <nav class="main-menu">
                 <h1>XYZ Power</h1>
-                <nav>
-                    <ul>
-                        <li>home page</li>
-                        <li>your home</li>
-                        <li>community</li>
-                    </ul>
-                </nav>
-            </div>
+                <ul class="main-menu-items">
+                    <li class="item"><a href="index.html">Home Page</a></li>
+                    <li class="item"><a href="your-home.html">Your Home</a></li>
+                    <li class="item"><a href="community.html">Community</a></li>
+                </ul>
+            </nav>
         </header>
         <main>
-            <section class="hero">
-                <img src="img/banner-wind.jpg" alt="windmill banner">
+            <section class="home-hero">
+                <img src="img/banner-your-home.jpg" alt="home banner">
             </section>
-            <div class="container">
-                <section class="grid">
-                    <div class="card-1">
-                        <img src="img/your-home-1.jpg">
+            <div class="home-container">
+                <section class="home-grid">
+                    <div class="card">
+                        <img src="img/your-home-1.jpg" alt="generic home image">
                         <span>Manage Account ></span>
                     </div>
-                    <div class="card-2">
-                        <img src="img/your-home-2.jpg">
+                    <div class="card">
+                        <img src="img/your-home-2.jpg" alt="generic home image">
                         <span>Energy Products ></span>
                     </div>
-                    <div class="card-3">
-                        <img src="img/your-home-3.jpg">
+                    <div class="card">
+                        <img src="img/your-home-3.jpg" alt="generic home image">
                         <span>Save Money & Energy ></span>
                     </div>
-                    <div class="card-4">
-                        <img src="img/your-home-4.jpg">
+                    <div class="card">
+                        <img src="img/your-home-4.jpg" alt="generic home image">
                         <span>Smart Meters ></span>
                     </div>
-                    <div class="card-5">
-                        <img src="img/your-home-5.jpg">
+                    <div class="card">
+                        <img src="img/your-home-5.jpg" alt="generic home image">
                         <span>Buiolding & Renovating ></span>
                     </div>
-                    <div class="card-6">
-                        <img src="img/your-home-6.jpg">
+                    <div class="card">
+                        <img src="img/your-home-6.jpg" alt="generic home image">
                         <span>Safety ></span>
                     </div>
                 </section>
-                <section>
+                <section class="post">
                     <h2>Finding the right energy product for your home</h2>
-                    <img src="img/your-home-right-energy.jpg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam consequuntur illum voluptatem, praesentium fuga enim quia, iure hic consectetur itaque optio eius repellat veniam. Esse aperiam ab totam nobis.</p>
-                    <span>Browse all energy products ></span>
-                </section>
-                <section>
-                    <h2>Everyone deserves a warm home</h2>
-                    <img src="img/your-home-warm.jpg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam consequuntur illum voluptatem, praesentium fuga enim quia, iure hic consectetur itaque optio eius repellat veniam. Esse aperiam ab totam nobis.</p>
-                    <span>Browse all energy products ></span>
-                </section>
-                <section>
-                    <h2>Need some additional help?</h2>
-                    <div>
-                        <h5>Find Quick Answers</h5>
-                        <span>Broswer our FAQ</span>
+                    <div class="content">
+                        <img src="img/your-home-right-energy.jpg" alt="generic home image">
+                        <div class="content-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam consequuntur illum voluptatem, praesentium fuga enim quia, iure hic consectetur itaque optio eius repellat veniam. Esse aperiam ab totam nobis.</p>
+                            <span>Browse all energy products ></span>
+                        </div>
                     </div>
-                    <div>
+                </section>
+                <section class="post">
+                    <h2>Everyone deserves a warm home</h2>
+                    <div class="content-2">
+                        <img src="img/your-home-warm.jpg" alt="generic home image">
+                        <div class="content-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laboriosam consequuntur illum voluptatem, praesentium fuga enim quia, iure hic consectetur itaque optio eius repellat veniam. Esse aperiam ab totam nobis.</p>
+                            <span>Browse all energy products ></span>
+                        </div>
+                    </div>    
+                </section>
+            </div> 
+            <section class="cta">
+                <h2>Need some additional help?</h2>
+                <div class="small-cards">
+                    <div class="small-card">
+                        <h5>Find Quick Answers</h5>
+                        <span>Browse our FAQ</span>
+                    </div>
+                    <div class="small-card">
                         <h5>Contact Us</h5>
                         <span>By email or phone</span>
                     </div>
-                    <div>
+                    <div class="small-card">
                         <h5>Self-service forms</h5>
                         <span>View our Customer Service Page</span>
                     </div>
-                </section>
-            </div> 
+                </div>
+            </section>
         </main>
-        <footer>
-            <p>© 2021 XYZ Power.</p>
-            <ul>
-                <li>Media</li>
-                <li>Legal</li>
-                <li>Privay Statement</li>
-                <li>Careers</li>
-                <li>Sitemap</li>
-            </ul>
+        <footer class="footer">
+            <nav class="footer-menu">
+                <p>© 2021 XYZ Power.</p>
+                <ul class="footer-items">
+                    <li class="item">Media</li>
+                    <li class="item">Legal</li>
+                    <li class="item">Privacy Statement</li>
+                    <li class="item">Careers</li>
+                    <li class="item">Sitemap</li>
+                </ul>
+            </nav>
         </footer>
     </body>
 </html>

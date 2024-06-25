@@ -72,9 +72,10 @@
  
  ol,
  ul,
- dl {
+ dl,
+ p {
    margin-top: 0;
-   margin-bottom: 1rem;
+   margin-bottom: 0;
  }
  
  ol ol,
