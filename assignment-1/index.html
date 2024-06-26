@@ -50,18 +50,28 @@
                         <p>Where is your electricity coming from?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, consequatur? Harum non officia, possimus nemo accusamus blanditiis dolor ut, tempora, mollitia molestiae repudiandae quibusdam itaque. Doloribus quia autem vel provident?</p>
                         <div class="charts">
-                            <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
-                            <div id="app">
-                                <donut-chart :initial-values="values"></donut-chart>
+                            <div class="donut-chart">
+                                <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+                                <div id="app">
+                                    <donut-chart :initial-values="values"></donut-chart>
+                                </div>
+                                <script type="text/x-template" id="donutTemplate">
+                                    <svg height="160" width="160" viewBox="0 0 160 160" class="donut-chart">
+                                        <g v-for="(value, index) in sortedValues">
+                                            <circle :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
+                                            <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ percentageString(value) }}</text>
+                                        </g>
+                                    </svg>
+                                </script>
                             </div>
-                            <script type="text/x-template" id="donutTemplate">
-                                <svg height="160" width="160" viewBox="0 0 160 160" class="donut-chart">
-                                    <g v-for="(value, index) in sortedValues">
-                                        <circle :cx="cx" :cy="cy" :r="radius" :stroke="colors[index]" :stroke-width="strokeWidth" :stroke-dasharray="adjustedCircumference" :stroke-dashoffset="calculateStrokeDashOffset(value, circumference)" fill="transparent" :transform="returnCircleTransformValue(index)" />
-                                        <text v-if="segmentBigEnough(value)" text-anchor="middle" dy="3px" :x="chartData[index].textX" :y="chartData[index].textY">{{ percentageString(value) }}</text>
-                                    </g>
-                                </svg>
-                            </script>
+                            <div class="bar-chart">
+                                <div style="width: 40px;">4</div>
+                                <div style="width: 80px;">8</div>
+                                <div style="width: 150px;">15</div>
+                                <div style="width: 160px;">16</div>
+                                <div style="width: 230px;">23</div>
+                                <div style="width: 300px;">42</div>
+                            </div>
                         </div>
                         <button>Learn more about today's power</button>
                     </section>
